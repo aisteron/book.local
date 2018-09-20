@@ -1,0 +1,13 @@
+body {
+  background-color: #F2F2F2;
+}
+body header {
+  text-align: center;
+}
+body section {
+  width: 1200px;
+  height: 500px;
+  margin: auto;
+  background-color: #fff;
+}
+/*# sourceMappingURL=css/style.css.map */
