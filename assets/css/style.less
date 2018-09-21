@@ -1,10 +1,4 @@
-.checkout-wrap {
-  color: #444;
-  font-family: 'PT Sans Caption', sans-serif;
-  margin: 40px auto;
-  max-width: 1200px;
-  position: relative;
-}
+
 
 ul.checkout-bar {
   margin: 0 20px;
@@ -45,7 +39,7 @@ ul.checkout-bar li.active:before {
   z-index: 99999;
 }
 ul.checkout-bar li.visited {
-  background: #ECECEC;
+  //background: #ECECEC;
   color: #57aed1;
   z-index: 99999;
 }
@@ -178,5 +172,19 @@ body
 		height:500px;
 		margin: auto;
 		background-color:#fff;
+		@media only screen and (max-width:1200px)
+		{
+			width:100%;
+		}
+
+		.checkout-wrap 
+		{
+			color: #444;
+			font-family: sans-serif;
+			margin: 40px auto;
+			max-width: 1200px;
+			position: relative;
+			
+		}
 	}
 }
