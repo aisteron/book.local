@@ -1,17 +1,20 @@
 /* checkout-bar */
-.checkout-wrap {
+
+.checkout-wrap 
+{
   color: #444;
   font-family: sans-serif;
   margin: 40px auto;
   max-width: 1200px;
   position: relative;
-  margin-bottom: 8em;
-}
-@media screen and (max-width: 800px) {
-  .checkout-wrap {
-    margin-bottom: 1em;
+  margin-bottom:8em;
+
+  @media screen and(max-width:800px)
+  {
+    margin-bottom:1em;
   }
 }
+
 ul.checkout-bar {
   margin: 0 20px;
 }
@@ -22,10 +25,10 @@ ul.checkout-bar li {
   font-weight: 600;
   padding: 14px 20px 14px 80px;
   position: relative;
-}
-@media only screen and (max-width: 800px) {
-  ul.checkout-bar li {
-    padding-left: 0em;
+
+  @media only screen and(max-width:800px)
+  {
+    padding-left:0em;
   }
 }
 ul.checkout-bar li:before {
@@ -56,6 +59,7 @@ ul.checkout-bar li.active:before {
   z-index: 99999;
 }
 ul.checkout-bar li.visited {
+  //background: #ECECEC;
   color: #57aed1;
   z-index: 99999;
 }
@@ -87,7 +91,9 @@ ul.checkout-bar a {
   font-weight: 600;
   text-decoration: none;
 }
+
 @media all and (min-width: 800px) {
+  
   .checkout-bar li.active:after {
     -webkit-animation: myanimation 3s 0;
     background-size: 35px 35px;
@@ -104,6 +110,8 @@ ul.checkout-bar a {
     top: -50px;
     z-index: 0;
   }
+
+
   ul.checkout-bar {
     -webkit-box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
     box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
@@ -117,6 +125,7 @@ ul.checkout-bar a {
     padding: 0;
     position: absolute;
     width: 100%;
+
   }
   ul.checkout-bar:before {
     background-size: 35px 35px;
@@ -166,108 +175,14 @@ ul.checkout-bar a {
     width: 100%;
     z-index: 99;
   }
+
+} //min-width
+
+@media only screen and (max-width:800px)
+{
+	ul.checkout-bar
+	{
+		margin:0;
+		padding:0;
+	}
 }
-@media only screen and (max-width: 800px) {
-  ul.checkout-bar {
-    margin: 0;
-    padding: 0;
-  }
-}
-body {
-  background-color: #F2F2F2;
-}
-body header {
-  text-align: center;
-}
-body section {
-  width: 1200px;
-  margin: auto;
-  background-color: #fff;
-  padding: 1em;
-}
-@media only screen and (max-width: 1200px) {
-  body section {
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 800px) {
-  body section {
-    padding: 0;
-  }
-}
-body section .area {
-  display: flex;
-}
-body section .area .left {
-  width: 580px;
-}
-@media screen and (max-width: 800px) {
-  body section .area .left {
-    width: 100%;
-  }
-}
-body section .area .left h3 {
-  margin: 0.3rem;
-  border-bottom: 1px solid #333;
-  padding-bottom: 0.5em;
-  margin-bottom: 0.6em;
-}
-body section .area .left .arrows {
-  float: right;
-  transform: translate(-22px, -40px);
-}
-body section .area .left .arrows span.prev {
-  padding-left: 1em;
-}
-body section .area .left .tabs-wrap {
-  display: flex;
-  flex-wrap: wrap;
-}
-body section .area .left .tabs-wrap .state {
-  position: absolute;
-  left: -10000px;
-}
-body section .area .left .tabs-wrap .tab {
-  max-height: 40px;
-  display: inline-block;
-  padding: 10px;
-  vertical-align: top;
-  background-color: #eee;
-  cursor: pointer;
-  border-left: 10px solid #ccc;
-}
-body section .area .left .tabs-wrap .panel {
-  background-color: #fff;
-  padding: 20px;
-  min-height: 300px;
-  display: none;
-  width: 100%;
-  flex-basis: auto;
-}
-body section .area .left .tabs-wrap #tab1:checked ~ .flex-tabs #tab1-label,
-body section .area .left .tabs-wrap #tab2:checked ~ .flex-tabs #tab2-label,
-body section .area .left .tabs-wrap #tab3:checked ~ .flex-tabs #tab3-label,
-body section .area .left .tabs-wrap #tab4:checked ~ .flex-tabs #tab4-label,
-body section .area .left .tabs-wrap #tab5:checked ~ .flex-tabs #tab5-label {
-  background-color: #fff;
-  cursor: default;
-  border-left-color: #69be28;
-}
-body section .area .left .tabs-wrap #tab1:checked ~ .flex-tabs #tab1-panel,
-body section .area .left .tabs-wrap #tab2:checked ~ .flex-tabs #tab2-panel,
-body section .area .left .tabs-wrap #tab3:checked ~ .flex-tabs #tab3-panel,
-body section .area .left .tabs-wrap #tab4:checked ~ .flex-tabs #tab4-panel,
-body section .area .left .tabs-wrap #tab5:checked ~ .flex-tabs #tab5-panel {
-  display: block;
-}
-body section .area .right {
-  background: #ccc;
-  width: 580px;
-  height: 400px;
-}
-@media screen and (max-width: 800px) {
-  body section .area .right {
-    display: none;
-  }
-}
-/*# sourceMappingURL=css/style.css.map */
