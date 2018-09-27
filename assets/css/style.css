@@ -192,26 +192,31 @@ body section {
 }
 @media only screen and (max-width: 1200px) {
   body section {
-    width: 100%;
+    width: 97%;
   }
 }
 @media only screen and (max-width: 800px) {
   body section {
     padding: 0;
+    width: 100%;
   }
 }
 body section .area {
   display: flex;
+  flex-wrap: wrap;
 }
 body section .area .left {
-  width: 580px;
+  width: 600px;
+  margin-right: 1em;
 }
 @media screen and (max-width: 800px) {
   body section .area .left {
     width: 100%;
+    margin-right: 0;
   }
 }
-body section .area .left h3 {
+body section .area .left h3,
+body section .area .right .route_info h3 {
   margin: 0.3rem;
   border-bottom: 1px solid #333;
   padding-bottom: 0.5em;
@@ -219,14 +224,10 @@ body section .area .left h3 {
 }
 body section .area .left .arrows {
   float: right;
-  transform: translate(-22px, -40px);
+  transform: translate(-5px, -40px);
 }
 body section .area .left .arrows span.prev {
-  padding-left: 1em;
-}
-body section .area .left .tabs-wrap {
-  display: flex;
-  flex-wrap: wrap;
+  padding-right: 1em;
 }
 body section .area .left .tabs-wrap .state {
   position: absolute;
@@ -237,17 +238,14 @@ body section .area .left .tabs-wrap .tab {
   display: inline-block;
   padding: 10px;
   vertical-align: top;
-  background-color: #eee;
   cursor: pointer;
-  border-left: 10px solid #ccc;
-  margin-bottom: 0.22rem;
+  border-left: 2px solid #fff;
 }
 body section .area .left .tabs-wrap .panel {
   background-color: #fff;
   padding: 20px;
   min-height: 300px;
   display: none;
-  width: 100%;
   flex-basis: auto;
 }
 body section .area .left .tabs-wrap #tab1:checked ~ .flex-tabs #tab1-label,
@@ -255,7 +253,7 @@ body section .area .left .tabs-wrap #tab2:checked ~ .flex-tabs #tab2-label,
 body section .area .left .tabs-wrap #tab3:checked ~ .flex-tabs #tab3-label,
 body section .area .left .tabs-wrap #tab4:checked ~ .flex-tabs #tab4-label,
 body section .area .left .tabs-wrap #tab5:checked ~ .flex-tabs #tab5-label {
-  background-color: #fff;
+  background-color: #eee;
   cursor: default;
   border-left-color: #69be28;
 }
@@ -265,15 +263,52 @@ body section .area .left .tabs-wrap #tab3:checked ~ .flex-tabs #tab3-panel,
 body section .area .left .tabs-wrap #tab4:checked ~ .flex-tabs #tab4-panel,
 body section .area .left .tabs-wrap #tab5:checked ~ .flex-tabs #tab5-panel {
   display: block;
+  background: #eee;
+}
+@media screen and (max-width: 800px) {
+  body section .area .left .tabs-wrap #tab1:checked ~ .flex-tabs #tab1-panel,
+  body section .area .left .tabs-wrap #tab2:checked ~ .flex-tabs #tab2-panel,
+  body section .area .left .tabs-wrap #tab3:checked ~ .flex-tabs #tab3-panel,
+  body section .area .left .tabs-wrap #tab4:checked ~ .flex-tabs #tab4-panel,
+  body section .area .left .tabs-wrap #tab5:checked ~ .flex-tabs #tab5-panel {
+    border: 1px solid #e0e0e0;
+    border-top: 0;
+  }
+}
+body section .area .left .tabs-wrap #tab1:checked ~ .flex-tabs #tab1-panel .input_line label,
+body section .area .left .tabs-wrap #tab2:checked ~ .flex-tabs #tab2-panel .input_line label,
+body section .area .left .tabs-wrap #tab3:checked ~ .flex-tabs #tab3-panel .input_line label,
+body section .area .left .tabs-wrap #tab4:checked ~ .flex-tabs #tab4-panel .input_line label,
+body section .area .left .tabs-wrap #tab5:checked ~ .flex-tabs #tab5-panel .input_line label {
+  display: inline-block;
+  width: 140px;
+  margin: 0.4rem 0;
 }
 body section .area .right {
-  background: #ccc;
-  width: 580px;
   height: 400px;
+  flex-grow: 1;
 }
 @media screen and (max-width: 800px) {
   body section .area .right {
     display: none;
   }
 }
-/*# sourceMappingURL=css/style.css.map */
+body section .area .right .route_info {
+  background: #eee;
+}
+body section .area .right .route_info h3 {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.2rem;
+}
+body section .area .right .route_info ul {
+  columns: 2;
+  padding: 1em;
+}
+body section .area .right .route_info ul li {
+  list-style-type: none;
+}
+body section .area .right #map {
+  height: calc(100% - 111px);
+}
+/*# sourceMappingURL=/assets/css/style.css.map */

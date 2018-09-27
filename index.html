@@ -14,19 +14,19 @@
 	<section>
 		<div class="checkout-wrap">
 			<ul class="checkout-bar">
-				<li class="visited first"><a href="#">Login</a></li>
-				<li class="previous visited">Shipping & Billing</li>
-				<li class="active">Shipping Options</li>
-				<li class="next">Review & Payment</li>
-				<li class="">Complete</li>
+				<li class="active"><a href="#">Journey</a></li>
+				<li class="">Car</li>
+				<li class="">Passenger</li>
+				<li class="">Additional</li>
+				<li class="">Confirm</li>
 			</ul>
 		</div>
 		<div class="area">
 			<div class="left">
 				<h3>Journey details</h3>
 				<div class="arrows">
-					<span class="next">Next</span>
 					<span class="prev">Prev</span>
+					<span class="next">Next</span>
 				</div>
 				
 				<div class="tabs-wrap">
@@ -48,8 +48,28 @@
 					
 				
 						<div id="tab1-panel" class="panel active">
-							<h1>One way journey</h1>
-							<p>tab1 content</p>
+							
+							<div class="input_line">
+								<label for="">Pickup Address</label>
+								<input type="text" placeholder="Enter your pickup address">
+								<span class="add">+ Add via point</span>
+							</div>
+							
+							<div class="input_line">
+								<label for="">Destination Address</label>
+								<input type="text" placeholder="Enter your destination address">
+							</div>
+							
+							<div class="input_line">
+								<label for="">Pickup date</label>
+								<input type="text" placeholder="..click here..">
+							</div>
+							
+							<div class="input_line">
+								<label for="">Pickup time</label>
+								<input type="text" placeholder="..click here..">
+							</div>
+							
 						</div>
 
 						<div id="tab2-panel" class="panel">
@@ -77,8 +97,24 @@
 				</div><!--.tabs-wrap-->
 
 			</div> <!--left-->	
-			<div class="right"></div>
+			<div class="right">
+				<div class="route_info">
+					<h3>Route info</h3>
+
+					<ul>
+						<li>Miles</li>
+						<li>Kms</li>
+						<li>Travel time</li>
+						<li>Stops</li>
+					</ul>
+				</div>
+
+				<div id="map"></div>
+			</div>
 		</div>
 	</section>
+
+<script src="assets/js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg0zBibsnBJ924LAMLUZgiu2o7N-LaDSY&callback=initMap"></script>	
 </body>
 </html>

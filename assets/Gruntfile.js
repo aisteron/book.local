@@ -12,8 +12,10 @@ module.exports = function(grunt){
 			    options: 
 				    {
 					  
-					  paths: ['/css'],
+					  //paths: ['/'],
 						sourceMap:true,
+						sourceMapRootpath: '/assets/',
+						sourceMapURL:'/assets/css/style.css.map'
 				      /*plugins: // временно отлючаю плагины, т.к. sourcemap не работает с ними.
 				      	[
 				        new (require('less-plugin-autoprefix'))({browsers: ["last 3 versions"]}),
