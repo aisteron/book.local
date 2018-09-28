@@ -87,10 +87,16 @@ ul.checkout-bar li:nth-child(6):before {
   content: "6";
 }
 ul.checkout-bar a {
-  color: #57aed1;
+  color: #ccc;
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
+}
+ul.checkout-bar li.active a {
+  color: #8bc53f;
+}
+ul.checkout-bar li.visited a {
+  color: #57aed1;
 }
 @media all and (min-width: 800px) {
   .checkout-bar li.active:after {
@@ -283,6 +289,116 @@ body section .area .left .tabs-wrap #tab5:checked ~ .flex-tabs #tab5-panel .inpu
   display: inline-block;
   width: 140px;
   margin: 0.4rem 0;
+}
+body section .area .left .tabs-wrap #tab1:checked ~ .flex-tabs #tab1-panel .input_line span.add,
+body section .area .left .tabs-wrap #tab2:checked ~ .flex-tabs #tab2-panel .input_line span.add,
+body section .area .left .tabs-wrap #tab3:checked ~ .flex-tabs #tab3-panel .input_line span.add,
+body section .area .left .tabs-wrap #tab4:checked ~ .flex-tabs #tab4-panel .input_line span.add,
+body section .area .left .tabs-wrap #tab5:checked ~ .flex-tabs #tab5-panel .input_line span.add {
+  display: inline;
+}
+@media screen and (max-width: 600px) {
+  body section .area .left .tabs-wrap #tab1:checked ~ .flex-tabs #tab1-panel .input_line span.add,
+  body section .area .left .tabs-wrap #tab2:checked ~ .flex-tabs #tab2-panel .input_line span.add,
+  body section .area .left .tabs-wrap #tab3:checked ~ .flex-tabs #tab3-panel .input_line span.add,
+  body section .area .left .tabs-wrap #tab4:checked ~ .flex-tabs #tab4-panel .input_line span.add,
+  body section .area .left .tabs-wrap #tab5:checked ~ .flex-tabs #tab5-panel .input_line span.add {
+    display: block;
+    padding: 0.5rem;
+  }
+}
+body section .area .left .tabs-wrap #tab1:checked ~ .flex-tabs #tab1-panel .radio_area,
+body section .area .left .tabs-wrap #tab2:checked ~ .flex-tabs #tab2-panel .radio_area,
+body section .area .left .tabs-wrap #tab3:checked ~ .flex-tabs #tab3-panel .radio_area,
+body section .area .left .tabs-wrap #tab4:checked ~ .flex-tabs #tab4-panel .radio_area,
+body section .area .left .tabs-wrap #tab5:checked ~ .flex-tabs #tab5-panel .radio_area {
+  display: inline;
+}
+@media screen and (max-width: 400px) {
+  body section .area .left .tabs-wrap #tab1:checked ~ .flex-tabs #tab1-panel .radio_area,
+  body section .area .left .tabs-wrap #tab2:checked ~ .flex-tabs #tab2-panel .radio_area,
+  body section .area .left .tabs-wrap #tab3:checked ~ .flex-tabs #tab3-panel .radio_area,
+  body section .area .left .tabs-wrap #tab4:checked ~ .flex-tabs #tab4-panel .radio_area,
+  body section .area .left .tabs-wrap #tab5:checked ~ .flex-tabs #tab5-panel .radio_area {
+    display: block;
+  }
+}
+body section .area .left .tabs-wrap #tab1:checked ~ .flex-tabs #tab1-panel .radio_area label,
+body section .area .left .tabs-wrap #tab2:checked ~ .flex-tabs #tab2-panel .radio_area label,
+body section .area .left .tabs-wrap #tab3:checked ~ .flex-tabs #tab3-panel .radio_area label,
+body section .area .left .tabs-wrap #tab4:checked ~ .flex-tabs #tab4-panel .radio_area label,
+body section .area .left .tabs-wrap #tab5:checked ~ .flex-tabs #tab5-panel .radio_area label {
+  display: inline;
+  cursor: pointer;
+}
+body section .area .left .tabs-wrap #tab1:checked ~ .flex-tabs #tab1-panel .radio_area label[for="arrival_radio"],
+body section .area .left .tabs-wrap #tab2:checked ~ .flex-tabs #tab2-panel .radio_area label[for="arrival_radio"],
+body section .area .left .tabs-wrap #tab3:checked ~ .flex-tabs #tab3-panel .radio_area label[for="arrival_radio"],
+body section .area .left .tabs-wrap #tab4:checked ~ .flex-tabs #tab4-panel .radio_area label[for="arrival_radio"],
+body section .area .left .tabs-wrap #tab5:checked ~ .flex-tabs #tab5-panel .radio_area label[for="arrival_radio"] {
+  padding-right: 1em;
+}
+body section .area .left .tabs-wrap #tab5-panel h4 {
+  border-bottom: 1px solid #c1c1c1;
+  padding-bottom: 0.4rem;
+  margin: 0.3rem 0;
+}
+body section .area .left .tabs-wrap #tab5-panel h4:nth-of-type(2) {
+  margin-top: 1em;
+}
+body section .area .left .tabs-wrap.step2 {
+  padding: 1em;
+}
+body section .area .left .tabs-wrap .input-line label {
+  display: inline-block;
+  width: 140px;
+  margin: 0.4rem 0;
+}
+body section .area .left .tabs-wrap .input-line .radio_area {
+  display: inline;
+}
+body section .area .left .tabs-wrap .input-line .radio_area label {
+  width: inherit;
+  cursor: pointer;
+}
+body section .area .left .tabs-wrap .car_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+body section .area .left .tabs-wrap .car_list .item {
+  width: 228px;
+  height: 280px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  position: relative;
+  margin: 0.5rem;
+}
+body section .area .left .tabs-wrap .car_list .item img {
+  width: 150px;
+  margin: 4em auto 2em;
+  display: block;
+}
+body section .area .left .tabs-wrap .car_list .item p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+body section .area .left .tabs-wrap .car_list .item p.passengers {
+  padding-top: 1em;
+  font-size: 0.8rem;
+}
+body section .area .left .tabs-wrap .car_list .item p.model {
+  font-weight: bold;
+}
+body section .area .left .tabs-wrap .car_list .item p.price {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #eee;
+  width: calc(100% - 0.2rem);
+  border-radius: 0 0 8px 8px;
+  padding: 0.3rem 0 0.3rem 0.3rem;
+  text-align: left;
 }
 body section .area .right {
   height: 400px;

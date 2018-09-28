@@ -14,11 +14,11 @@
 	<section>
 		<div class="checkout-wrap">
 			<ul class="checkout-bar">
-				<li class="active"><a href="#">Journey</a></li>
-				<li class="">Car</li>
-				<li class="">Passenger</li>
-				<li class="">Additional</li>
-				<li class="">Confirm</li>
+				<li class="active step1"><a href="#">Journey</a></li>
+				<li class="step2"><a href="#">Car</a></li>
+				<li class="passenger"><a href="#">Passenger</a></li>
+				<li class="additional"><a href="#">Additional</a></li>
+				<li class="confirm"><a href="#">Confirm</a></li>
 			</ul>
 		</div>
 		<div class="area">
@@ -29,7 +29,7 @@
 					<span class="next">Next</span>
 				</div>
 				
-				<div class="tabs-wrap">
+				<div class="tabs-wrap step1">
 					<input type="radio" class="state" id='tab1' checked name="tabs-state">
 					<input type="radio" class="state" id='tab2' name="tabs-state">
 					<input type="radio" class="state" id='tab3' name="tabs-state">
@@ -73,28 +73,208 @@
 						</div>
 
 						<div id="tab2-panel" class="panel">
-							<h1>Return</h1>
-							<p>tab2 content</p>
+							<div class="input_line">
+								<label for="">Pickup Address</label>
+								<input type="text" placeholder="Enter your pickup address">
+								<span class="add">+ Add via point</span>
+							</div>
+							
+							<div class="input_line">
+								<label for="">Destination Address</label>
+								<input type="text" placeholder="Enter your destination address">
+							</div>
+							
+							<div class="input_line">
+								<label for="">Pickup date</label>
+								<input type="text" placeholder="..click here..">
+							</div>
+							
+							<div class="input_line">
+								<label for="">Pickup time</label>
+								<input type="text" placeholder="..click here..">
+							</div>
+							<hr>
+							<div class="input_line">
+								<label for="">Return pickup date</label>
+								<input type="text" placeholder="..click here..">
+							</div>
+							
+							<div class="input_line">
+								<label for="">Return pickup time</label>
+								<input type="text" placeholder="..click here..">
+							</div>
 						</div>
 
 						<div id="tab3-panel" class="panel">
-							<h1>Hourly</h1>
-							<p>tab3 content</p>
+							<div class="input_line">
+								<label for="">Pickup Address</label>
+								<input type="text" placeholder="Enter your pickup address">
+								<span class="add">+ Add via point</span>
+							</div>
+							
+							<div class="input_line">
+								<label for="">Destination Address</label>
+								<input type="text" placeholder="Enter your destination address">
+							</div>
+							
+							<div class="input_line">
+								<label for="">Pickup date</label>
+								<input type="text" placeholder="..click here..">
+							</div>
+							
+							<div class="input_line">
+								<label for="">Pickup time</label>
+								<input type="text" placeholder="..click here..">
+							</div>
+							<div class="input_line">
+								<label for="">Booking time</label>
+								<input type="number" value="1" min="1">
+							</div>
 						</div>
 
-						<div id="tab4-panel" class="panel">
-							<h1>Airport transfer</h1>
-							<p>tab4 content</p>
+						<div id="tab4-panel" class="panel"><!--airport transfer-->
+							<div class="input_line">
+								<label>Flight type</label>
+								<div class="radio_area">
+									<input type="radio" name="tab4_flight_type" id="arrival_radio" checked><label for="arrival_radio">Arrival</label>
+									<input type="radio" name="tab4_flight_type" id="departure_radio"><label for="departure_radio">Departure</label>
+								</div>
+							</div>
+							<div class="input_line">
+								<label>Destination Address</label>
+								<input type="text" placeholder="Enter your destination address">
+							</div>
+							<div class="input_line">
+								<label>Pickup Airport</label>
+								<select name="" id="">
+									<option>Minsk</option>
+									<option>Grodno</option>
+									<option>Brest</option>
+									<option>Gomel</option>
+									<option>Mogilev</option>
+									<option>Vitebsk</option>
+								</select>
+							</div>
+							<div class="input_line">
+								<label for="">Pickup date</label>
+								<input type="text" placeholder="..click here..">
+							</div>
+							
+							<div class="input_line">
+								<label for="">Pickup time</label>
+								<input type="text" placeholder="..click here..">
+							</div>
+
 						</div>
 
 						<div id="tab5-panel" class="panel">
-							<h1>Return airport transfer</h1>
-							<p>tab5 content</p>
+							<h4>Outward journey</h4>
+							<div class="input_line">
+								<label>Flight type</label>
+								<div class="radio_area">
+									<input type="radio" name="flight_type" id="arrival_radio" checked><label for="arrival_radio">Arrival</label>
+									<input type="radio" name="flight_type" id="departure_radio"><label for="departure_radio">Departure</label>
+								</div>
+							</div>
+							<div class="input_line">
+								<label>Destination Address</label>
+								<input type="text" placeholder="Enter your destination address">
+							</div>
+							<div class="input_line">
+								<label>Destination Airport</label>
+								<select name="" id="">
+									<option>Minsk</option>
+									<option>Grodno</option>
+									<option>Brest</option>
+									<option>Gomel</option>
+									<option>Mogilev</option>
+									<option>Vitebsk</option>
+								</select>
+							</div>
+							<div class="input_line">
+								<label for="">Pickup date</label>
+								<input type="text" placeholder="..click here..">
+							</div>
+							
+							<div class="input_line">
+								<label for="">Pickup time</label>
+								<input type="text" placeholder="..click here..">
+							</div>
+
+							<h4>Return journey</h4>
+
+							<div class="input_line">
+								<label>Flight type</label>
+								<div class="radio_area">
+									<input type="radio" name="return_flight_type" id="arrival_radio" ><label for="arrival_radio">Arrival</label>
+									<input type="radio" name="return_flight_type" id="departure_radio" checked><label for="departure_radio">Departure</label>
+								</div>
+							</div>
+							<div class="input_line">
+								<label>Pickup Address</label>
+								<input type="text" placeholder="Enter your pickup address">
+							</div>
+							<div class="input_line">
+								<label>Departure Airport</label>
+								<select name="" id="">
+									<option>Minsk</option>
+									<option>Grodno</option>
+									<option>Brest</option>
+									<option>Gomel</option>
+									<option>Mogilev</option>
+									<option>Vitebsk</option>
+								</select>
+							</div>
+							<div class="input_line">
+								<label for="">Return pickup date</label>
+								<input type="text" placeholder="..click here..">
+							</div>
+							
+							<div class="input_line">
+								<label for="">Return pickup time</label>
+								<input type="text" placeholder="..click here..">
+							</div>
 						</div>
 
-				</div><!--.flex-tabs---->
+					</div><!--.flex-tabs---->
 
-				</div><!--.tabs-wrap-->
+				</div><!--.tabs-wrap step1 (journey)-->
+				<div class="tabs-wrap step2" style="display:none">
+					<div class="input-line">
+						<label>Payment type</label>
+						<select>
+							<option>Select it</option>
+							<option>Debit Card</option>
+							<option>Credit Card</option>
+						</select>
+					</div>
+					<div class="input-line">
+						<label>Request type</label>
+						<div class="radio_area">
+							<input type="radio" name="request_type" id="booking_radio" checked><label for="booking_radio">Booking</label>
+							<input type="radio" name="request_type" id="quotation_radio"><label for="quotation_radio">Quotation</label>
+						</div>
+					</div>
+					<div class="input-line">
+						<label>Type of Vehicle</label>
+						<span><i>Please, select the vehicle</i></span>
+					</div>
+					<div class="car_list">
+						<div class="item">
+							<img src="/assets/img/car-list-eclass.png">
+							<p class="model">Mercedes E-class</p>
+							<p class="passengers">Max.passengers: 4</p>
+							<p class="price">$ 62</p>
+						</div>
+						<div class="item">
+							<img src="/assets/img/car-list-sclass1.png">
+							<p class="model">Mercedes S-class</p>
+							<p class="passengers">Max.passengers: 4</p>
+							<p class="price">$ 96</p>
+						</div>
+					</div>
+				</div><!--.tabs-wrap step2 (car) -->
+
 
 			</div> <!--left-->	
 			<div class="right">
@@ -115,6 +295,7 @@
 	</section>
 
 <script src="assets/js/map.js"></script>
+<script src="assets/components/checkout-bar.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg0zBibsnBJ924LAMLUZgiu2o7N-LaDSY&callback=initMap"></script>	
 </body>
 </html>
