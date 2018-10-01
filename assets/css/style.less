@@ -10,7 +10,7 @@ body
 	section
 	{
 		width:1200px;
-
+		min-height:553px;
 		margin: auto;
 		background-color:#fff;
 		padding:1em;
@@ -158,7 +158,7 @@ body
 					    }
 					    
 			        }
-					// retrun aurport tab
+					// return aurport tab
 			        #tab5-panel
 			        {
 						h4 
@@ -180,10 +180,10 @@ body
 				.tabs-wrap
 				{
 					//
-					&.step2
-					{
-						padding:1em;
-					}
+					//&:not(:first-of-type)
+					//{
+						//padding:1em;
+					//}
 
 					.input-line
 					{
@@ -202,6 +202,25 @@ body
 								width:inherit;
 								cursor:pointer;
 							}
+						}
+
+						.textarea-instructions
+						{
+						    width: 167px;
+    						height: 85px;
+    						& + span
+    						{
+							    display: block;
+							    margin-left: 12.5rem;
+							    margin-top: 1em;
+							    font-size: 0.8rem;
+
+							    @media only screen and (max-width:360px)
+							    {
+							    	margin-left:0;
+							    }
+
+    						}
 						}
 
 					}
@@ -254,6 +273,98 @@ body
 
 							}
 						}
+					}
+				}
+
+				// step5 confirm
+
+				.tabs-wrap
+				{
+					.black-squares
+					{
+						display: flex;
+						flex-wrap:wrap;
+
+						.item 
+						{
+							width: 228px;
+						    border: 1px solid #bbb;
+						    border-radius: 6px;
+						    display: flex;
+						    margin-right: 1em;
+
+						    .icon
+						    {
+
+				    			background-color: #4e4e4e;
+							    width: 72px;
+							    position: relative;
+
+							    img 
+							    {
+							    	position: absolute;
+								    left: 32%;
+    								top: 36%;
+							    }
+						    }
+
+						    .content
+						    {
+						    	padding-left:1em;
+
+						    	p:nth-of-type(1)
+						    	{
+						    		text-transform:uppercase;
+						    		font-weight:bold;
+						    	}
+						    	p:nth-of-type(2)
+						    	{
+						    		text-transform:uppercase;
+						    	}
+						    }
+						}
+						.item:nth-of-type(3)
+						{
+							margin-top:1em;
+						}
+					}
+					.blue-squares
+					{
+						display:flex;
+						flex-wrap:wrap;
+						.item
+						{
+						    width: 346px;
+						    border: 1px solid #eee;
+						    border-radius: 6px;
+						    margin-bottom: 1em;
+						    padding: 1em;
+							header
+							{
+								background-color: #21759b;
+								color:#fff;
+							    margin-left: -1em;
+							    margin-right: -1em;
+							    margin-top: -1em;
+							    border-radius:6px 6px 0 0;
+						        padding: 0.2rem;
+					            margin-bottom: 0.7rem;
+							}
+
+							table tr td:nth-of-type(1)
+							{
+								font-weight:bold;
+							}
+							table tr td:nth-of-type(2)
+							{
+								padding-left:1em;
+							}
+						}
+						.item:nth-of-type(1)
+						{
+							margin-top:1em;
+						}
+
 					}
 				}
 			}

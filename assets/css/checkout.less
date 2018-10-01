@@ -129,6 +129,13 @@ ul.checkout-bar li.visited a
     z-index: 0;
   }
 
+  .checkout-bar li.active:last-of-type:after
+  {
+    background-color:transparent;
+    background-image:none;
+    box-shadow:none;
+  }
+
 
   ul.checkout-bar {
     -webkit-box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
@@ -144,6 +151,9 @@ ul.checkout-bar li.visited a
     position: absolute;
     width: 100%;
 
+  }
+  ul.checkout-bar.lastStep {
+    background-color: #8bc53f;
   }
   ul.checkout-bar:before {
     background-size: 35px 35px;

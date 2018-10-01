@@ -115,6 +115,11 @@ ul.checkout-bar li.visited a {
     top: -50px;
     z-index: 0;
   }
+  .checkout-bar li.active:last-of-type:after {
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+  }
   ul.checkout-bar {
     -webkit-box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
     box-shadow: inset 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
@@ -128,6 +133,9 @@ ul.checkout-bar li.visited a {
     padding: 0;
     position: absolute;
     width: 100%;
+  }
+  ul.checkout-bar.lastStep {
+    background-color: #8bc53f;
   }
   ul.checkout-bar:before {
     background-size: 35px 35px;
@@ -192,6 +200,7 @@ body header {
 }
 body section {
   width: 1200px;
+  min-height: 553px;
   margin: auto;
   background-color: #fff;
   padding: 1em;
@@ -346,9 +355,6 @@ body section .area .left .tabs-wrap #tab5-panel h4 {
 body section .area .left .tabs-wrap #tab5-panel h4:nth-of-type(2) {
   margin-top: 1em;
 }
-body section .area .left .tabs-wrap.step2 {
-  padding: 1em;
-}
 body section .area .left .tabs-wrap .input-line label {
   display: inline-block;
   width: 140px;
@@ -360,6 +366,21 @@ body section .area .left .tabs-wrap .input-line .radio_area {
 body section .area .left .tabs-wrap .input-line .radio_area label {
   width: inherit;
   cursor: pointer;
+}
+body section .area .left .tabs-wrap .input-line .textarea-instructions {
+  width: 167px;
+  height: 85px;
+}
+body section .area .left .tabs-wrap .input-line .textarea-instructions + span {
+  display: block;
+  margin-left: 12.5rem;
+  margin-top: 1em;
+  font-size: 0.8rem;
+}
+@media only screen and (max-width: 360px) {
+  body section .area .left .tabs-wrap .input-line .textarea-instructions + span {
+    margin-left: 0;
+  }
 }
 body section .area .left .tabs-wrap .car_list {
   display: flex;
@@ -399,6 +420,70 @@ body section .area .left .tabs-wrap .car_list .item p.price {
   border-radius: 0 0 8px 8px;
   padding: 0.3rem 0 0.3rem 0.3rem;
   text-align: left;
+}
+body section .area .left .tabs-wrap .black-squares {
+  display: flex;
+  flex-wrap: wrap;
+}
+body section .area .left .tabs-wrap .black-squares .item {
+  width: 228px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  display: flex;
+  margin-right: 1em;
+}
+body section .area .left .tabs-wrap .black-squares .item .icon {
+  background-color: #4e4e4e;
+  width: 72px;
+  position: relative;
+}
+body section .area .left .tabs-wrap .black-squares .item .icon img {
+  position: absolute;
+  left: 32%;
+  top: 36%;
+}
+body section .area .left .tabs-wrap .black-squares .item .content {
+  padding-left: 1em;
+}
+body section .area .left .tabs-wrap .black-squares .item .content p:nth-of-type(1) {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+body section .area .left .tabs-wrap .black-squares .item .content p:nth-of-type(2) {
+  text-transform: uppercase;
+}
+body section .area .left .tabs-wrap .black-squares .item:nth-of-type(3) {
+  margin-top: 1em;
+}
+body section .area .left .tabs-wrap .blue-squares {
+  display: flex;
+  flex-wrap: wrap;
+}
+body section .area .left .tabs-wrap .blue-squares .item {
+  width: 346px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+body section .area .left .tabs-wrap .blue-squares .item header {
+  background-color: #21759b;
+  color: #fff;
+  margin-left: -1em;
+  margin-right: -1em;
+  margin-top: -1em;
+  border-radius: 6px 6px 0 0;
+  padding: 0.2rem;
+  margin-bottom: 0.7rem;
+}
+body section .area .left .tabs-wrap .blue-squares .item table tr td:nth-of-type(1) {
+  font-weight: bold;
+}
+body section .area .left .tabs-wrap .blue-squares .item table tr td:nth-of-type(2) {
+  padding-left: 1em;
+}
+body section .area .left .tabs-wrap .blue-squares .item:nth-of-type(1) {
+  margin-top: 1em;
 }
 body section .area .right {
   height: 400px;

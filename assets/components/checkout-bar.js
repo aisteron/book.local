@@ -22,6 +22,18 @@ function checkout_paint()
 						e.classList.remove('visited');
 					});
 
+					//console.log(steps.length);
+					// красим последний шаг
+					if ((index+1) == steps.length)
+					{
+						//console.log('i`ma last');
+						document.querySelector('ul.checkout-bar').classList.add('lastStep');
+					} else 
+					{
+						document.querySelector('ul.checkout-bar').classList.remove('lastStep');
+					}
+
+
 					e.classList.add('active');
 
 					for (var i = index - 1; i >= 0; i--) 
