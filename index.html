@@ -242,7 +242,7 @@
 				<div class="tabs-wrap step2" style="display:none">
 					<div class="input-line">
 						<label>Payment type</label>
-						<select>
+						<select disabled="disabled">
 							<option>Select it</option>
 							<option>Debit Card</option>
 							<option>Credit Card</option>
@@ -251,8 +251,8 @@
 					<div class="input-line">
 						<label>Request type</label>
 						<div class="radio_area">
-							<input type="radio" name="request_type" id="booking_radio" checked><label for="booking_radio">Booking</label>
-							<input type="radio" name="request_type" id="quotation_radio"><label for="quotation_radio">Quotation</label>
+							<input type="radio" name="request_type" id="booking_radio" ><label for="booking_radio">Booking</label>
+							<input type="radio" name="request_type" id="quotation_radio" checked><label for="quotation_radio">Quotation</label>
 						</div>
 					</div>
 					<div class="input-line">
@@ -296,8 +296,98 @@
 						<label>No. of passengers</label>
 						<input type="number" value="1" min="1">
 					</div>
+				</div><!-- /.tabs-wrap passenger -->
+				<div class="tabs-wrap flight" style="display:none">
+					<div class="outward">
+						<h4>Outward journey</h4>
+
+						<div class="input-line">
+							<label>Airline</label>
+							<input type="text">
+						</div>
+
+						<div class="input-line">
+							<label>Flight No</label>
+							<input type="text">
+						</div>
+
+						<div class="input-line">
+							<label>Arrival date</label>
+							<input type="text">
+						</div>
+
+						<div class="input-line">
+							<label>Arrival time</label>
+							<input type="text">
+						</div>
+
+						<div class="input-line">
+							<label>Arriving into</label>
+							<input type="text">
+						</div>
+
+						<div class="input-line">
+							<label>Flying from</label>
+							<input type="text">
+						</div>
+
+						<div class="input-line">
+							<label>Luggage from</label>
+							<input type="number" min="1" value="1">
+						</div>
+
+						<div class="input-line">
+							<label>Meeting point</label>
+							<input type="text">
+						</div>
+					</div>
+					<div class="return" style="display:none">
+						<h4>Return journey</h4>
+
+						<div class="input-line">
+							<label>Airline</label>
+							<input type="text">
+						</div>
+
+						<div class="input-line">
+							<label>Flight No</label>
+							<input type="text">
+						</div>
+
+						<div class="input-line">
+							<label>Departure date</label>
+							<input type="text">
+						</div>
+
+						<div class="input-line">
+							<label>Departure time</label>
+							<input type="text">
+						</div>
+
+						<div class="input-line">
+							<label>Flying to</label>
+							<input type="text">
+						</div>
+
+						<div class="input-line">
+							<label>Departing from</label>
+							<input type="text">
+						</div>
+
+						<div class="input-line">
+							<label>Luggage from</label>
+							<input type="number" min="1" value="1">
+						</div>
+
+						<div class="input-line">
+							<label>Meeting point</label>
+							<input type="text">
+						</div>
+					</div>
+					
 				</div>
-				<!-- /.tabs-wrap passenger -->
+				<!-- /.tabs-wrap flight -->
+				
 				<div class="tabs-wrap additional" style="display:none">
 					<div class="input-line">
 						<label>Booked by</label>
@@ -314,7 +404,77 @@
 					</div>
 				</div>
 
-				<div class="tabs-wrap confirm">
+				<div class="tabs-wrap payment" style="display:none">
+					<div class="input-line">
+						<label>Card type</label>
+						<select>
+							<option>Visa Credit</option>
+							<option>Visa Debit</option>
+							<option>Visa Electron</option>
+							<option>MasterCard Credit</option>
+							<option>MasterCard Debit</option>
+							<option>Maestro</option>
+							<option>JCB</option>
+							<option>American Express</option>
+						</select>
+					</div>
+				
+					<div class="input-line">
+						<label>Card fee</label>
+						<input type="text" value="0.00" disabled="disabled">
+						<span>$</span>
+					</div>
+					<div class="input-line">
+						<label>Total amount</label>
+						<input type="text" value="122.4" disabled="disabled">
+						<span>$</span>
+					</div>
+
+					<div class="input-line">
+						<label>Card no</label>
+						<input type="text" placeholder="XXXX YYYY ZZZZ AAAA">
+					</div>
+
+					<div class="input-line">
+						<label>Expiry date</label>
+						<input type="number" placeholder="MM" style="width: 5rem;">
+						<input type="number" placeholder="YYYY" style="width: 5rem;">
+					</div>
+
+					<div class="input-line">
+						<label>Security code</label>
+						<input type="number" placeholder="CVV" style="width: 5rem;">
+					</div>
+
+					<div class="input-line">
+						<label>Cardholder name</label>
+						<input type="text" placeholder="ex. JOHN DOE">
+					</div>
+
+					<div class="input-line">
+						<label>House no</label>
+						<input type="text">
+					</div>
+
+					<div class="input-line">
+						<label>City</label>
+						<input type="text">
+					</div>
+
+					<div class="input-line">
+						<label>Postcode</label>
+						<input type="text">
+					</div>
+
+					<div class="input-line">
+						<label>Country code</label>
+						<input type="text" placeholder="ex. GB">
+					</div>
+
+				</div>
+				<!-- /.tabs-wrap payment -->
+
+				<div class="tabs-wrap confirm" style="display:none">
 					<p>A summary of your booking is shown below. Kindly review and confirm whether you wish to proceed with this transaction.</p>
 					<div class="black-squares">
 						<div class="item">
@@ -419,6 +579,8 @@
 
 <script src="assets/js/map.js"></script>
 <script src="assets/components/checkout-bar.js"></script>
+<script src="assets/components/tab45.js"></script>
+<script src="assets/components/step2.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAg0zBibsnBJ924LAMLUZgiu2o7N-LaDSY&callback=initMap"></script>	
 </body>
 </html>

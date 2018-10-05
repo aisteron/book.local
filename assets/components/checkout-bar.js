@@ -3,13 +3,21 @@ var left_header_h3 =
 		step1: "Journey details",
 		step2: "Car",
 		passenger: "Passenger",
+		flight: "Flight details",
 		additional: "Additional",
+		payment: "Payment",
 		confirm: "Confirm"
 	}
 
-function checkout_paint()
+function checkout_paint(points)
 {
+	//console.log(steps);
+	if (points !== undefined)
+	{
+		//console.log(points);
+	} 
 	let steps = document.querySelectorAll('.checkout-bar li');
+	
 	
 	steps.forEach(function(e, index){
 		{
