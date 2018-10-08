@@ -28,17 +28,23 @@ function add_flight_step()
 			{
 				if (!document.querySelector('.checkout-bar .flight')) {
 
-				document.querySelector('.checkout-bar .passenger').insertAdjacentHTML('afterend', 
-				'<li class="flight width16"><a href="#">Flight</a></li>');
-				
-				steps.forEach(function(item){
-					item.classList.add('width16');
-				});
+					if(document.querySelector('.checkout-bar .payment'))
+					{
+						document.querySelector('.checkout-bar .passenger').insertAdjacentHTML('afterend', '<li class="flight width14"><a href="#">Flight</a></li>');
 
-					/*повторный вызов для возможности манипулирования вновь созданным шагом */
-					checkout_paint(document.querySelectorAll('.checkout-bar li'));
+						document.querySelectorAll('.checkout-bar li').forEach(function(item){ item.classList.remove('width16'); });
+						document.querySelectorAll('.checkout-bar li').forEach(function(item){ item.classList.add('width14'); });
+						
+						checkout_paint(document.querySelectorAll('.checkout-bar li'));
+					} else 
+					{
+						document.querySelector('.checkout-bar .passenger').insertAdjacentHTML('afterend', '<li class="flight width16"><a href="#">Flight</a></li>');
+						steps.forEach(function(item){ item.classList.add('width16'); });
+						checkout_paint(document.querySelectorAll('.checkout-bar li'));
+					}
 
-				}
+
+				} // если нет шага .flight
 
 
 			} else 
@@ -47,9 +53,17 @@ function add_flight_step()
 				{
 					document.querySelector('.checkout-bar .flight').parentNode.removeChild(document.querySelector('.checkout-bar .flight'));
 
-					steps.forEach(function(item){
+					document.querySelectorAll('.checkout-bar li').forEach(function(item){
+
+
 						item.classList.remove('width16');
-						//item.classList.remove('width14');
+						item.classList.remove('width14');
+
+						if(document.querySelector('.checkout-bar li.payment'))
+						{
+							item.classList.add('width16');
+						}
+						
 					});
 				}
 				
@@ -69,3 +83,42 @@ function add_flight_step()
 }
 
 add_flight_step();
+
+
+/**
+*
+**
+*			ARRIVAL DEPARTURE RADIOBUTTONS
+*
+**
+*/
+
+function tab4_radio()
+{
+	let label = document.querySelectorAll("#tab4-panel .input_line")[1].querySelector('label');
+	let airport = document.querySelectorAll("#tab4-panel .input_line")[2].querySelector('label');
+
+
+	document.querySelectorAll("#tab4-panel .radio_area input").forEach(function(e){
+		e.addEventListener("click", function(){
+
+			//console.log(this.getAttribute('id'));
+			if(this.getAttribute('id') == 'arrival_radio')
+			{
+				label.textContent = 'Destination Address';
+				label.nextElementSibling.setAttribute('placeholder', 'Enter Destination address');
+				airport.textContent = 'Pickup Airport';
+				//console.log(label);
+			} else if(this.getAttribute('id') == 'departure_radio')
+			{
+				label.textContent = 'Pickup Address';
+				label.nextElementSibling.setAttribute('placeholder', 'Enter pickup address');
+				airport.textContent = 'Departure Airport';
+			}
+
+		});
+
+	});
+
+}
+tab4_radio();
