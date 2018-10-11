@@ -121,4 +121,64 @@ function tab4_radio()
 	});
 
 }
+
 tab4_radio();
+
+tab5_radio();
+
+function tab5_radio()
+{
+	document.querySelectorAll("#tab5-panel .radio_area input").forEach(function(e){
+
+		e.addEventListener("click", function(){
+			if(this.getAttribute('id') == 'outward_arrival_radio')
+			{
+				/*radio*/
+
+				document.querySelector('#return_arrival_radio').removeAttribute('checked');
+				document.querySelector('#return_departure_radio').setAttribute('checked', 'checked');
+
+				/*outward*/
+
+				document.querySelector('.input_line.dest label').textContent = 'Destination Address';
+				document.querySelector('.input_line.dest input').setAttribute('placeholder', 'Enter destination address');
+
+				document.querySelector('.input_line.pickup_airport label').textContent = 'Pickup airport';
+
+				/*return*/
+
+				document.querySelector('.input_line.pickup_address label').textContent = 'Pickup address';
+				document.querySelector('.input_line.pickup_address input').setAttribute('placeholder', 'Enter pickup address');
+
+				document.querySelector('.input_line.departure_airport label').textContent = 'Departure airport';
+
+
+				
+			} else if (this.getAttribute('id') == 'outward_departure_radio') //departure radio
+			{
+				/*radio*/
+
+				document.querySelector('#return_departure_radio').removeAttribute('checked');
+				document.querySelector('#return_arrival_radio').setAttribute('checked', 'checked');
+
+				/*outward*/
+
+				document.querySelector('.input_line.dest label').textContent = 'Pickup Address';
+				document.querySelector('.input_line.dest input').setAttribute('placeholder', 'Enter pickup address');
+
+				document.querySelector('.input_line.pickup_airport label').textContent = 'Departure airport';
+
+				/*return*/
+
+				document.querySelector('.input_line.pickup_address label').textContent = 'Destination address';
+				document.querySelector('.input_line.pickup_address input').setAttribute('placeholder', 'Enter destination address');
+
+				document.querySelector('.input_line.departure_airport label').textContent = 'Pickup airport';
+
+
+				
+			}
+		});
+
+	});
+}

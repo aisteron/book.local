@@ -143,6 +143,7 @@
 							<div class="input_line">
 								<label>Destination Address</label>
 								<input type="text" placeholder="Enter your destination address">
+								<span class="add">+ Add via point</span>
 							</div>
 							<div class="input_line">
 								<label>Pickup Airport</label>
@@ -172,17 +173,18 @@
 							<div class="input_line">
 								<label>Flight type</label>
 								<div class="radio_area">
-									<input type="radio" name="flight_type" id="arrival_radio" checked><label for="arrival_radio">Arrival</label>
-									<input type="radio" name="flight_type" id="departure_radio"><label for="departure_radio">Departure</label>
+									<input type="radio" name="flight_type" id="outward_arrival_radio" checked><label for="outward_arrival_radio">Arrival</label>
+									<input type="radio" name="flight_type" id="outward_departure_radio"><label for="outward_departure_radio">Departure</label>
 								</div>
 							</div>
-							<div class="input_line">
+							<div class="input_line dest">
 								<label>Destination Address</label>
 								<input type="text" placeholder="Enter your destination address">
+								<span class="add">+ Add via point</span>
 							</div>
-							<div class="input_line">
-								<label>Destination Airport</label>
-								<select name="" id="">
+							<div class="input_line pickup_airport">
+								<label>Pickup Airport</label>
+								<select>
 									<option>Minsk</option>
 									<option>Grodno</option>
 									<option>Brest</option>
@@ -206,15 +208,15 @@
 							<div class="input_line">
 								<label>Flight type</label>
 								<div class="radio_area">
-									<input type="radio" name="return_flight_type" id="arrival_radio" ><label for="arrival_radio">Arrival</label>
-									<input type="radio" name="return_flight_type" id="departure_radio" checked><label for="departure_radio">Departure</label>
+									<input type="radio" name="return_flight_type" id="return_arrival_radio" disabled ><label for="return_arrival_radio">Arrival</label>
+									<input type="radio" name="return_flight_type" id="return_departure_radio" checked disabled><label for="return_departure_radio">Departure</label>
 								</div>
 							</div>
-							<div class="input_line">
+							<div class="input_line pickup_address">
 								<label>Pickup Address</label>
 								<input type="text" placeholder="Enter your pickup address">
 							</div>
-							<div class="input_line">
+							<div class="input_line departure_airport">
 								<label>Departure Airport</label>
 								<select name="" id="">
 									<option>Minsk</option>
